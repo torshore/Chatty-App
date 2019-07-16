@@ -1,17 +1,10 @@
 React Boilerplate
 =====================
 
-A minimal and light dev environment for ReactJS.
+A minimal chat app using React and WebSockets.
 
 ### Usage
 
-Clone the boilerplate and create your own git repo.
-
-```
-git clone git@github.com:lighthouse-labs/react-simple-boilerplate.git
-git remote rm origin
-git remote add origin [YOUR NEW REPOSITORY]
-# Manually update your package.json file
 ```
 
 Install the dependencies and start the server.
@@ -19,7 +12,13 @@ Install the dependencies and start the server.
 ```
 npm install
 npm start
-open http://localhost:3000
+open http://localhost:8080
+```
+
+```
+cd chatty-Server
+npm install
+node server.js
 ```
 
 ### Static Files
@@ -35,10 +34,3 @@ This boilerplate project includes React ESLint configuration.
 ```
 npm run lint
 ```
-
-### Dependencies
-
-* React
-* Webpack
-* [babel-loader](https://github.com/babel/babel-loader)
-* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
