@@ -4,26 +4,25 @@ import MessageList from './MessageList.jsx';
 import ChatBar from './ChatBar.jsx';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentUser: "Anonymous",
-      messages: [],
+    constructor(props) {
+        super(props);
+        this.state = {
+             currentUser: "Anonymous",
+             messages: [],
+        }
     }
-  }
 
-  addMessage = (event) => {
-  if (event.key === "Enter") {
+    addMessage = event => {
+        if (event.key === "Enter") {
 
-    let newMessage = {
-      type: "postMessage",
-      username: this.state.currentUser,
-      content: event.target.value
-    };
-    console.log(23, newMessage)
-    this.socket.send(JSON.stringify(newMessage));
-  };
-  }
+            let newMessage = {
+              type: "postMessage",
+              username: this.state.currentUser,
+              content: event.target.value
+            };
+            this.socket.send(JSON.stringify(newMessage));
+        };
+    }
 
   changeUsername = (event) => {
     if (event.key === "Enter") {
@@ -40,7 +39,6 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    console.log("19, componentDidMount <App />");
     this.socket = new WebSocket("ws://localhost:3001/");
 
     this.socket.onopen = (event) => {
@@ -84,4 +82,3 @@ export default class App extends Component {
     );
   }
 }
-
