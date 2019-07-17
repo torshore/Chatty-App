@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import REACTDOM from 'react-dom';
 import MessageList from './MessageList.jsx';
 import ChatBar from './ChatBar.jsx';
 
