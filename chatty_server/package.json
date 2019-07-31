@@ -11,6 +11,8 @@
   "dependencies": {
     "express": "4.15.2",
     "node-uuid": "1.4.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "ws": "2.2.0"
   }
 }

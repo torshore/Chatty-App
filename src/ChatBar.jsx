@@ -1,27 +1,20 @@
-import React, {Component} from 'react';
-import App from './App.jsx';
+import React from 'react';
 
-class ChatBar extends Component {
-
-  render() {
-    return (
-      <footer className="chatbar">
-      <input
-        className="chatbar-username"
-        type="text"
-        placeholder="Your Name (Optional)"
-        onKeyDown={this.props.changeUsername}
-      />
-      <input
-        type="text"
-        className="chatbar-message"
-        placeholder="Type a message and hit ENTER"
-        onKeyDown={this.props.addMessage}
-      />
-      </footer>
-    );
-  }
-
-};
+function ChatBar({ changeUsername, addMessage }) {
+    return <footer className="chatbar">
+        <input
+            className="chatbar-username"
+            type="text"
+            placeholder="Your Name (Optional)"
+            onChange={changeUsername}
+        />
+        <input
+            type="text"
+            className="chatbar-message"
+            placeholder="Type a message and hit ENTER"
+            onChange={addMessage}
+         />
+    </footer>
+}
 
 export default ChatBar;
